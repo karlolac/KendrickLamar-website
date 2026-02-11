@@ -1,0 +1,321 @@
+/* INDEX  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+html,body {
+    height: 100%;
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    color:white ;
+}
+
+.intro h2{
+    color:#28282B;
+}
+
+header {
+    background-color:#686330; 
+    color: white;
+    padding: 20px ;
+}
+
+.kendrickTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: auto; 
+    list-style: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-container li a {
+    text-decoration: none;
+    color: #cacaca;
+    font-weight:400 ;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-container li a:hover,
+.nav-container li a.active {
+    background-color: #7a7a40; 
+    color: white;
+    border-radius: 5px;
+}
+
+main {
+    flex: 1; 
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 30px;
+    background-color: #306863;
+}
+
+.hero-section .intro {
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+.hero-section .hero-image {
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+.hero-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #28282B	;
+    color: #cccccc;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/*  GALERIJA */
+
+.albums-intro{
+    background-color:#cacaca;
+}
+
+.gallery-intro h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color:#28282B;
+}
+
+.gallery-intro {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;    
+    gap: 15px;              
+    padding: 50px 20px;
+    background-color: #306863; 
+    color: white;               
+    text-align: left;
+    margin: 0 auto; 
+    font-size: 16px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px; 
+    padding: 20px;
+    background-color: #306863;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    display: block;
+    transition: transform 0.3s;
+    border-radius: 10px;
+    border: 3px solid rgba(204, 204, 204, 0.6);
+}
+
+.gallery-item img:hover {
+    transform: scale(1.15);
+}
+
+
+/*  ALBUM  */
+
+.albums-all {
+    background-color: #306863;
+    padding: 30px 0 100px;
+}
+
+.albums-intro h2{
+    color:#28282B;
+}
+
+.albums-intro {
+    padding: 40px 60px;
+    background: transparent;
+    font-size: 25px;
+    color:#D9E4E1;
+}
+
+.albums-table {
+    width: 100%;
+    max-width: 900px;   
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 20px;
+    table-layout: fixed;
+}
+
+.album-cell {
+    background-color: #cacaca;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    vertical-align: top;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.album-cell:hover {
+    transform: scale(1.03);
+}
+
+.album-cell a {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.album-cell img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.album-cell .cover {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.album-cell .vinyl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+}
+
+.album-cell a:hover .cover {
+    opacity: 0;
+    transform: scale(1.05);
+}
+
+.album-cell a:hover .vinyl {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.album-title {
+    margin-top: 12px;
+    font-size: 1.2rem;
+    color:  #686330;
+    font-weight: bold;
+}
+
+.album-desc {
+    font-size: 0.9rem;
+    color: #28282B;
+    margin-top: 5px;
+}
+
+
+/* KONTAKT */
+
+.contact-section {
+    background-color: #306863;
+    padding: 50px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-intro h2{
+    color:#28282B;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #cacaca;
+    padding: 30px;
+    border-radius: 10px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.submit-btn {
+    background-color: #686330;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #7a7a40;
+}
+
+#formFeedback {
+    margin-top: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+textarea {
+    resize: none;
+}
